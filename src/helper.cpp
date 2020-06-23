@@ -148,8 +148,8 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
     int ret = 0;
 
     QProcess process;
-    qDebug() << "Running update-initramfs -u  now";
-    process.start(QStringLiteral("/usr/sbin/update-initramfs"), QStringList() << QStringLiteral("-u"));
+    qDebug() << "Running mkinitcpio -P  now";
+    process.start(QStringLiteral("/bin/mkinitcpio"), QStringList() << QStringLiteral("-P"));
     if (!process.waitForStarted()) {
         reply = ActionReply::BackendError;
         reply.setErrorDescription(i18n("Cannot start initramfs."));
