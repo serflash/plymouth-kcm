@@ -1,6 +1,6 @@
 to build:
 
-git clone -b Archlinux https://github.com/serflash/plymouth-kcm.git
+git clone https://github.com/serflash/plymouth-kcm.git
 cd plymouth-kcm
 mkdir build
 cd build
