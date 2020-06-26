@@ -1,5 +1,7 @@
 to build:
 
+git clone -b Archlinux https://github.com/serflash/plymouth-kcm.git
+cd plymouth-kcm
 mkdir build
 cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=`kf5-config --prefix`

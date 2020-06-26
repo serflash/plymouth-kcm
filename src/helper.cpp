@@ -148,7 +148,7 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
     int ret = 0;
 
     QProcess process;
-    qDebug() << "Running mkinitcpio -P  now";
+    qDebug() << "Running mkinitcpio -P now";
     process.start(QStringLiteral("/bin/mkinitcpio"), QStringList() << QStringLiteral("-P"));
     if (!process.waitForStarted()) {
         reply = ActionReply::BackendError;
