@@ -47,10 +47,10 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
     }
 
     {
-        KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("/usr/share/plymouth/plymouthd.default")), "Daemon");
+        KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("/usr/share/plymouth/plymouthd.defaults")), "Daemon");
         cg.writeEntry("Theme", theme);
     }
-    QFile configFile(QStringLiteral("/usr/share/plymouth/plymouthd.default"));
+    QFile configFile(QStringLiteral("/usr/share/plymouth/plymouthd.defaults"));
     configFile.setPermissions(QFileDevice::ReadOwner|QFileDevice::WriteOwner|QFileDevice::ReadGroup|QFileDevice::ReadOther);
 
     //Special case: Ubuntu derivatives, which work different from everybody else
