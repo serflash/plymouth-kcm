@@ -47,6 +47,7 @@ ActionReply PlymouthHelper::save(const QVariantMap &args)
     }
 
     {
+        file.remove("/usr/share/plymouth/plymouthd.defaults");
         KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("/usr/share/plymouth/plymouthd.defaults")), "Daemon");
         cg.writeEntry("Theme", theme);
     }
